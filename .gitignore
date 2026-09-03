@@ -1,0 +1,33 @@
+# dependencies
+/node_modules
+
+# next.js / build output
+/.next
+/out
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# deploy
+.vercel
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local-only working dirs (image staging, QA screenshots, docx extraction)
+/_incoming
+/_shots
+/_shots-*
+/content/_x

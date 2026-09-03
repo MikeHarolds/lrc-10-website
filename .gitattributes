@@ -1,0 +1,11 @@
+# Normalise line endings — repo is authored on Windows, built on Linux (Vercel)
+* text=auto eol=lf
+
+# Binary assets
+*.jpg   binary
+*.jpeg  binary
+*.png   binary
+*.webp  binary
+*.docx  binary
+*.woff  binary
+*.woff2 binary

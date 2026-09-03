@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-inter: "Inter", system-ui, sans-serif;
+    --font-onest: "Onest", system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 116px;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-white font-sans text-[16px] leading-[1.8] text-muted antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: #ff6d00;
+    color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    /* Default to ImpactField ink; dark sections set `text-white` explicitly. */
+    @apply font-display font-bold leading-[1.2] text-green text-balance;
+  }
+
+  /* ImpactField accent focus ring */
+  :focus-visible {
+    outline: 3px solid #ff6d00;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .section-tight {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .eyebrow {
+    @apply font-display text-xs font-bold uppercase tracking-[0.18em] text-orange;
+  }
+
+  .link-quiet {
+    @apply underline decoration-orange/40 decoration-2 underline-offset-4 transition-colors hover:decoration-orange;
+  }
+
+  /* Scroll-reveal — progressively enhanced by <Reveal /> */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Per-breakpoint object-position, driven by --op / --op-mobile inline vars. */
+  .section-img {
+    object-position: var(--op-mobile, var(--op, 50% 50%));
+  }
+  @media (min-width: 768px) {
+    .section-img {
+      object-position: var(--op, 50% 50%);
+    }
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Branded preloader */
+  .preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    background: #020d19;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  .preloader[data-hidden="true"] {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .preloader__ring {
+    width: 44px;
+    height: 44px;
+    border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-top-color: #ff6d00;
+    animation: spin-slow 0.9s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .preloader {
+      transition: none;
+    }
+    .preloader__ring {
+      animation: none;
+      border-top-color: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
