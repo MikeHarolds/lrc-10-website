@@ -142,7 +142,7 @@ export default function SpeakerProfileModal({
             {speaker.name}
           </h3>
           {(speaker.role || speaker.org) && (
-            <p className="mt-1.5 text-sm font-semibold text-orange sm:text-[15px]">
+            <p className="mt-1.5 text-sm font-semibold text-blue sm:text-[15px]">
               {speaker.role}
               {speaker.role && speaker.org ? " · " : ""}
               {speaker.org}
@@ -188,7 +188,7 @@ export default function SpeakerProfileModal({
               <ul className="mt-3 space-y-2 text-[15px] leading-relaxed text-muted">
                 {speaker.achievements!.map((item) => (
                   <li key={item} className="flex gap-2">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-orange" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue" />
                     {item}
                   </li>
                 ))}

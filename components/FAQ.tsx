@@ -19,14 +19,16 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           aria-controls={`${id}-panel`}
           id={`${id}-btn`}
           onClick={() => setOpen((v) => !v)}
-          className="flex w-full items-center justify-between gap-4 py-5 text-left"
+          className="flex w-full items-center justify-between gap-4 rounded-lg px-2 py-5 text-left transition-colors duration-200 -mx-2 hover:bg-blue-light/70"
         >
           <span className="font-display text-base font-bold text-green sm:text-lg">
             {q}
           </span>
           <span
-            className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-green/20 text-green transition-transform duration-200 ${
-              open ? "rotate-45 bg-green text-white" : ""
+            className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border transition-all duration-200 ${
+              open
+                ? "rotate-45 border-blue bg-blue text-white"
+                : "border-green/20 text-green"
             }`}
             aria-hidden="true"
           >
@@ -59,7 +61,7 @@ export default function FAQ() {
           <h2 className="mt-3 text-display-sm text-green sm:text-display-md">
             {faqs.title}
           </h2>
-          <span className="mx-auto mt-4 block h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+          <span className="mx-auto mt-4 block h-1 w-14 rounded-full bg-blue" aria-hidden="true" />
         </Reveal>
 
         <div className="mt-10 border-t border-green/10">

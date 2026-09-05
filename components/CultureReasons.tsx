@@ -11,7 +11,7 @@ export default function CultureReasons() {
           <h2 className="text-display-sm text-green sm:text-display-md">
             Why &ldquo;Shifting the Culture&rdquo;?
           </h2>
-          <span className="h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+          <span className="h-1 w-14 rounded-full bg-blue" aria-hidden="true" />
         </Reveal>
 
         <ul className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ export default function CultureReasons() {
             >
               <span
                 className={`grid h-12 w-12 place-items-center rounded-xl ${
-                  i % 2 === 0 ? "bg-green text-white" : "bg-orange text-white"
+                  i % 2 === 0 ? "bg-green text-white" : "bg-blue text-white"
                 }`}
               >
                 <Icon name={reason.icon} className="h-6 w-6" />

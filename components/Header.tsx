@@ -82,14 +82,14 @@ export default function Header() {
               href={site.contactPhoneHref}
               className="hidden items-center gap-2 rounded-pill border border-white/20 px-4 py-2.5 text-[13px] font-semibold text-white/85 transition-colors hover:border-white/40 hover:text-white xl:inline-flex"
             >
-              <Phone className="h-4 w-4 text-orange" />
+              <Phone className="h-4 w-4 text-blue-bright" />
               Need help?
             </a>
             <a
               href={links.register}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-pill bg-orange px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-orange-dark sm:inline-flex"
+              className="hidden rounded-pill bg-blue px-5 py-2.5 text-[13px] font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-blue-dark sm:inline-flex"
             >
               Register Now
             </a>
@@ -124,7 +124,7 @@ export default function Header() {
             </a>
           ))}
 
-          <p className="pb-2 pt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-orange">
+          <p className="pb-2 pt-5 text-[11px] font-bold uppercase tracking-[0.2em] text-blue-bright">
             ImpactField
           </p>
           {parentNav.map((item) => (
@@ -144,7 +144,7 @@ export default function Header() {
             href={links.register}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-5 rounded-pill bg-orange px-5 py-3.5 text-center text-sm font-bold uppercase tracking-[0.06em] text-white"
+            className="mt-5 rounded-pill bg-blue px-5 py-3.5 text-center text-sm font-bold uppercase tracking-[0.06em] text-white"
           >
             Register Now
           </a>
@@ -152,7 +152,7 @@ export default function Header() {
             href={site.contactPhoneHref}
             className="mb-3 mt-2 inline-flex items-center justify-center gap-2 rounded-pill border border-white/20 px-5 py-3 text-sm font-semibold text-white/85"
           >
-            <Phone className="h-4 w-4 text-orange" /> Need help? {site.contactPhone}
+            <Phone className="h-4 w-4 text-blue-bright" /> Need help? {site.contactPhone}
           </a>
         </nav>
       </div>

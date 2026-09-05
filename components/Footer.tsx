@@ -21,7 +21,7 @@ export default function Footer() {
             href={footer.volunteerCta.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-2 rounded-pill bg-orange px-6 py-3 text-sm font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-orange-dark"
+            className="inline-flex shrink-0 items-center gap-2 rounded-pill bg-blue px-6 py-3 text-sm font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-blue-dark"
           >
             {footer.volunteerCta.label}
             <ArrowRight className="h-4 w-4" />
@@ -37,13 +37,13 @@ export default function Footer() {
           </p>
           <ul className="mt-6 space-y-2.5 text-sm">
             <li className="flex items-start gap-2.5">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-orange" />
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-blue-bright" />
               <span>
                 {event.venue}, {event.address}
               </span>
             </li>
             <li className="flex items-center gap-2.5">
-              <Phone className="h-4 w-4 shrink-0 text-orange" />
+              <Phone className="h-4 w-4 shrink-0 text-blue-bright" />
               <a href={site.contactPhoneHref} className="hover:text-white">
                 {site.contactPhone}
               </a>
@@ -53,7 +53,7 @@ export default function Footer() {
               </a>
             </li>
             <li className="flex items-center gap-2.5">
-              <Mail className="h-4 w-4 shrink-0 text-orange" />
+              <Mail className="h-4 w-4 shrink-0 text-blue-bright" />
               <a href={`mailto:${site.orgEmail}`} className="hover:text-white">
                 {site.orgEmail}
               </a>
@@ -105,7 +105,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-orange hover:text-orange"
+                  className="grid h-9 w-9 place-items-center rounded-full border border-white/15 text-white/70 transition-colors hover:border-blue-bright hover:text-blue-bright"
                 >
                   {Icon ? <Icon className="h-[16px] w-[16px]" /> : null}
                 </a>

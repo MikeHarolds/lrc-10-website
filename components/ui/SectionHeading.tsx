@@ -37,7 +37,7 @@ export default function SectionHeading({
         {title}
       </Title>
       <span
-        className="h-1 w-12 rounded-full bg-orange"
+        className="h-1 w-12 rounded-full bg-blue"
         aria-hidden="true"
       />
       {intro && (

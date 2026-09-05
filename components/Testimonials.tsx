@@ -18,20 +18,20 @@ export default function Testimonials() {
       className="section relative overflow-hidden bg-green text-white"
     >
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_45%_at_90%_10%,rgba(255,109,0,0.12),transparent_60%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(45%_45%_at_90%_10%,rgba(62,123,250,0.16),transparent_60%)]"
         aria-hidden="true"
       />
       <div className="container relative max-w-3xl text-center">
         <Reveal>
-          <span className="eyebrow">{testimonials.eyebrow}</span>
+          <span className="eyebrow text-blue-bright">{testimonials.eyebrow}</span>
           <h2 className="mt-3 text-display-sm text-white sm:text-display-md">
             {testimonials.title}
           </h2>
-          <span className="mx-auto mt-4 block h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+          <span className="mx-auto mt-4 block h-1 w-14 rounded-full bg-blue-bright" aria-hidden="true" />
         </Reveal>
 
         <Reveal className="mt-10">
-          <Quote className="mx-auto h-9 w-9 text-orange" aria-hidden="true" />
+          <Quote className="mx-auto h-9 w-9 text-blue-bright" aria-hidden="true" />
           <blockquote
             className="mx-auto mt-5 min-h-[140px] max-w-2xl font-display text-xl font-semibold leading-snug text-white sm:text-2xl"
             aria-live="polite"
@@ -57,7 +57,7 @@ export default function Testimonials() {
             )}
             <div className="text-left">
               <p className="text-sm font-bold text-white">{current.name}</p>
-              <p className="text-xs text-orange">{current.role}</p>
+              <p className="text-xs text-blue-bright">{current.role}</p>
             </div>
           </div>
         </Reveal>
@@ -80,7 +80,7 @@ export default function Testimonials() {
                 aria-label={`Go to testimonial ${i + 1}`}
                 aria-current={i === index}
                 className={`h-2 rounded-full transition-all ${
-                  i === index ? "w-6 bg-orange" : "w-2 bg-white/25 hover:bg-white/40"
+                  i === index ? "w-6 bg-blue-bright" : "w-2 bg-white/25 hover:bg-white/40"
                 }`}
               />
             ))}

@@ -14,7 +14,7 @@ export default function Partners() {
             <h2 className="mt-3 text-display-sm text-green sm:text-display-md">
               {partners.title}
             </h2>
-            <span className="mt-4 block h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+            <span className="mt-4 block h-1 w-14 rounded-full bg-blue" aria-hidden="true" />
             <p className="mt-5 text-[15px] leading-relaxed text-muted sm:text-base">
               {partners.body}
             </p>
@@ -22,7 +22,7 @@ export default function Partners() {
             <ul className="mt-6 grid gap-x-6 gap-y-2.5 sm:grid-cols-2">
               {partners.opportunities.map((o) => (
                 <li key={o} className="flex items-center gap-2.5 text-sm font-medium text-ink/85">
-                  <Check className="h-4 w-4 shrink-0 text-orange" />
+                  <Check className="h-4 w-4 shrink-0 text-blue" />
                   {o}
                 </li>
               ))}

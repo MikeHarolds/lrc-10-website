@@ -39,7 +39,7 @@ export default function SpeakerCard({ speaker, onOpen }: SpeakerCardProps) {
         {speaker.status === "tba" ? "To Be Announced" : speaker.name}
       </p>
       {subtitle && (
-        <p className="line-clamp-1 text-xs font-semibold text-orange">{subtitle}</p>
+        <p className="line-clamp-1 text-xs font-semibold text-blue-bright">{subtitle}</p>
       )}
     </div>
   );
@@ -73,7 +73,7 @@ export default function SpeakerCard({ speaker, onOpen }: SpeakerCardProps) {
         {caption}
         <span
           aria-hidden="true"
-          className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors duration-200 group-hover:bg-orange group-focus-visible:bg-orange"
+          className="absolute right-3 top-3 grid h-8 w-8 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition-colors duration-200 group-hover:bg-blue group-focus-visible:bg-blue"
         >
           <Plus className="h-4 w-4" />
         </span>

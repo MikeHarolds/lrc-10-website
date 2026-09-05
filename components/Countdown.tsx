@@ -48,7 +48,7 @@ export default function Countdown({
   const shell = onDark
     ? "border-white/15 bg-white/[0.04]"
     : "border-green/12 bg-cream";
-  const headingColor = "text-orange";
+  const headingColor = onDark ? "text-blue-bright" : "text-blue";
   const numColor = onDark ? "text-white" : "text-green";
   const labelColor = onDark ? "text-white/55" : "text-muted";
   const divideColor = onDark ? "divide-white/10" : "divide-green/10";

@@ -9,8 +9,8 @@ export default function AnniversarySeal({ className = "" }: SealProps) {
       role="img"
       aria-label="Ten years"
     >
-      <circle cx="48" cy="48" r="46" fill="none" stroke="#C89B3C" strokeWidth="1.5" />
-      <circle cx="48" cy="48" r="40" fill="none" stroke="#C89B3C" strokeWidth="3" strokeDasharray="2 4" />
+      <circle cx="48" cy="48" r="46" fill="none" stroke="#3E7BFA" strokeWidth="1.5" />
+      <circle cx="48" cy="48" r="40" fill="none" stroke="#3E7BFA" strokeWidth="3" strokeDasharray="2 4" />
       <text
         x="48"
         y="45"
@@ -18,7 +18,7 @@ export default function AnniversarySeal({ className = "" }: SealProps) {
         fontFamily="Montserrat, sans-serif"
         fontWeight="800"
         fontSize="34"
-        fill="#C89B3C"
+        fill="#3E7BFA"
       >
         10
       </text>
@@ -30,7 +30,7 @@ export default function AnniversarySeal({ className = "" }: SealProps) {
         fontWeight="700"
         fontSize="10"
         letterSpacing="3"
-        fill="#C89B3C"
+        fill="#3E7BFA"
       >
         YEARS
       </text>

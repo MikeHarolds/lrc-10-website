@@ -12,7 +12,7 @@ export default function Program() {
           <h2 className="mt-3 text-display-sm text-green sm:text-display-md">
             {program.title}
           </h2>
-          <span className="mt-4 block h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+          <span className="mt-4 block h-1 w-14 rounded-full bg-blue" aria-hidden="true" />
 
           <ul className="mt-7 grid gap-x-6 gap-y-3 sm:grid-cols-2">
             {program.items.map((item) => (

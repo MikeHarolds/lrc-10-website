@@ -19,27 +19,30 @@ const base =
 
 const styles: Record<CTASurface, Record<CTAVariant, string>> = {
   dark: {
-    primary: "bg-orange text-white shadow-[0_12px_30px_-12px_rgba(255,109,0,0.6)] hover:bg-orange-dark",
+    primary: "bg-blue text-white shadow-[0_12px_30px_-12px_rgba(21,84,242,0.6)] hover:bg-blue-dark",
     secondary: "bg-white text-green shadow-[0_12px_30px_-14px_rgba(255,255,255,0.35)] hover:bg-cream",
     tertiary: "bg-white/5 text-white border border-white/30 hover:border-white/60 hover:bg-white/10",
   },
   light: {
-    primary: "bg-orange text-white shadow-[0_12px_30px_-12px_rgba(255,109,0,0.5)] hover:bg-orange-dark",
+    primary: "bg-blue text-white shadow-[0_12px_30px_-12px_rgba(21,84,242,0.5)] hover:bg-blue-dark",
     secondary: "bg-green text-white shadow-[0_12px_30px_-16px_rgba(2,13,25,0.6)] hover:bg-green-600",
     tertiary: "bg-white text-green border border-green/20 hover:border-green/40 hover:bg-cream",
   },
 };
 
+// Icon-badge colour is relative to the BUTTON'S OWN fill, not the page section:
+// white/near-transparent fills need the darker primary blue for contrast,
+// solid ink-green fills need the brighter on-dark blue.
 const iconTint: Record<CTASurface, Record<CTAVariant, string>> = {
   dark: {
     primary: "border-white/40 text-white",
-    secondary: "border-green/20 text-orange",
+    secondary: "border-green/20 text-blue",
     tertiary: "border-white/35 text-white",
   },
   light: {
     primary: "border-white/40 text-white",
-    secondary: "border-white/30 text-orange",
-    tertiary: "border-green/25 text-orange",
+    secondary: "border-white/30 text-blue-bright",
+    tertiary: "border-green/25 text-blue",
   },
 };
 

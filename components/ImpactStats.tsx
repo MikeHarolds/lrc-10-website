@@ -45,7 +45,7 @@ function Stat({
     <div className="text-center">
       <div className="font-display text-4xl font-extrabold text-green sm:text-5xl">
         {n.toLocaleString()}
-        <span className="text-orange">{suffix}</span>
+        <span className="text-blue">{suffix}</span>
       </div>
       <div className="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-muted sm:text-sm">
         {label}

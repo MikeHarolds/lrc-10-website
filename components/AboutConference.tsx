@@ -34,7 +34,7 @@ export default function AboutConference() {
             <h2 className="text-display-sm text-green sm:text-display-md">
               {about.title}
             </h2>
-            <span className="h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+            <span className="h-1 w-14 rounded-full bg-blue" aria-hidden="true" />
           </Reveal>
 
           <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-muted sm:text-base">
@@ -45,7 +45,7 @@ export default function AboutConference() {
             ))}
           </div>
 
-          <Reveal className="mt-8 border-l-2 border-orange pl-5">
+          <Reveal className="mt-8 border-l-2 border-blue pl-5">
             <p className="font-display text-lg font-bold leading-snug text-green sm:text-xl">
               {themeSection.pullQuote}
             </p>

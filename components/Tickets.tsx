@@ -19,18 +19,18 @@ export default function Tickets() {
               as="li"
               key={tier.name}
               delay={i * 80}
-              className={`relative flex h-full flex-col rounded-[16px] p-7 ${
+              className={`relative flex h-full flex-col rounded-[16px] p-7 transition-colors duration-200 ${
                 tier.featured
-                  ? "border-2 border-orange bg-white shadow-card-hover lg:-mt-4 lg:pb-10"
-                  : "border border-green/12 bg-white shadow-card"
+                  ? "border-2 border-blue bg-white shadow-card-hover lg:-mt-4 lg:pb-10"
+                  : "border border-green/12 bg-white shadow-card hover:border-blue/25 hover:bg-blue-light/40"
               }`}
             >
               {tier.featured && (
-                <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-orange px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-white">
+                <span className="absolute -top-3 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-blue px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-white">
                   <Star className="h-3.5 w-3.5" /> Recommended
                 </span>
               )}
-              <span className="text-xs font-bold uppercase tracking-[0.18em] text-orange">
+              <span className="text-xs font-bold uppercase tracking-[0.18em] text-blue">
                 {tier.name}
               </span>
               <span className="mt-2 font-display text-3xl font-extrabold text-green">
@@ -53,7 +53,7 @@ export default function Tickets() {
                 rel="noopener noreferrer"
                 className={`mt-7 inline-flex min-h-[52px] items-center justify-center rounded-pill px-5 text-sm font-bold uppercase tracking-[0.06em] transition-colors ${
                   tier.featured
-                    ? "bg-orange text-white hover:bg-orange-dark"
+                    ? "bg-blue text-white hover:bg-blue-dark"
                     : "bg-green text-white hover:bg-green-700"
                 }`}
               >

@@ -17,7 +17,7 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px",
-          background: "linear-gradient(135deg, #01060D 0%, #020D19 55%, #0A1826 100%)",
+          background: "linear-gradient(135deg, #01060D 0%, #020D19 50%, #0B1D63 100%)",
           color: "#ffffff",
           fontFamily: "sans-serif",
         }}
@@ -31,12 +31,12 @@ export default function Image() {
           </div>
           <div style={{ width: 1, height: 26, background: "rgba(255,255,255,0.25)" }} />
           <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: -1 }}>
-            LRC <span style={{ color: "#C89B3C" }}>10.0</span>
+            LRC <span style={{ color: "#3E7BFA" }}>10.0</span>
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          <div style={{ fontSize: 20, letterSpacing: 5, color: "#FF6D00" }}>
+          <div style={{ fontSize: 20, letterSpacing: 5, color: "#3E7BFA" }}>
             10 YEARS OF RAISING LEADERS
           </div>
           <div
@@ -50,13 +50,13 @@ export default function Image() {
           >
             Leadership Rebirth
             <br />
-            Conference <span style={{ color: "#C89B3C" }}>10.0</span>
+            Conference <span style={{ color: "#3E7BFA" }}>10.0</span>
           </div>
           <div
             style={{
               fontSize: 32,
               fontWeight: 700,
-              color: "#C89B3C",
+              color: "#3E7BFA",
               textTransform: "uppercase",
               letterSpacing: 1,
             }}

@@ -32,7 +32,7 @@ export default function Speakers() {
             <h2 className="mt-3 text-display-sm text-green sm:text-display-md">
               World-Class Speakers. Real Conversations.
             </h2>
-            <span className="mt-4 block h-1 w-14 rounded-full bg-orange" aria-hidden="true" />
+            <span className="mt-4 block h-1 w-14 rounded-full bg-blue" aria-hidden="true" />
             <p className="mt-5 text-[15px] leading-relaxed text-muted sm:text-base">
               {speakers.body}
             </p>
@@ -43,7 +43,7 @@ export default function Speakers() {
                 href={links.register}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex rounded-pill bg-orange px-5 py-3 text-sm font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-orange-dark"
+                className="inline-flex rounded-pill bg-blue px-5 py-3 text-sm font-bold uppercase tracking-[0.06em] text-white transition-colors hover:bg-blue-dark"
               >
                 Reserve Your Seat
               </a>

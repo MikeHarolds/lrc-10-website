@@ -21,7 +21,7 @@ export default function WhyAttend() {
               delay={(i % 3) * 70}
               className="flex h-full gap-4 rounded-card border border-green/10 bg-white p-6 shadow-card"
             >
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-orange text-white">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-blue text-white">
                 <Check className="h-5 w-5" />
               </span>
               <div>

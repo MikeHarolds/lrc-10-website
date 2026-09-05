@@ -24,7 +24,9 @@ export default function Logo({
         <>
           <span className="flex flex-col leading-none">
             <span className={`font-display text-[15px] font-extrabold tracking-tight ${primary}`}>
-              Impact<span className="text-orange">Field</span>
+              {/* ImpactField's own verified brand accent — kept as-is; LRC's
+                  own UI is blue elsewhere. */}
+              Impact<span className="text-ifOrange">Field</span>
             </span>
             <span className={`mt-1 text-[8px] font-bold uppercase tracking-[0.24em] ${sub}`}>
               Presents
@@ -35,7 +37,7 @@ export default function Logo({
       )}
       <span className="flex flex-col leading-none">
         <span className={`font-display text-xl font-extrabold tracking-tight ${primary}`}>
-          LRC <span className="text-gold">10.0</span>
+          LRC <span className="text-blue-bright">10.0</span>
         </span>
         <span className={`mt-1 text-[8px] font-bold uppercase tracking-[0.22em] ${sub}`}>
           Leadership Rebirth Conference

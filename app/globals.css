@@ -26,7 +26,7 @@
   }
 
   ::selection {
-    background: #ff6d00;
+    background: #3e7bfa;
     color: #ffffff;
   }
 
@@ -38,9 +38,10 @@
     @apply font-display font-bold leading-[1.2] text-green text-balance;
   }
 
-  /* ImpactField accent focus ring */
+  /* LRC 10.0 blue focus ring — the brighter blue reads clearly on both white
+     and navy surfaces (outline contrast, not small-text contrast). */
   :focus-visible {
-    outline: 3px solid #ff6d00;
+    outline: 3px solid #3e7bfa;
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -55,12 +56,16 @@
     @apply py-12 sm:py-16 lg:py-20;
   }
 
+  /* Default eyebrow colour suits WHITE/cream surfaces (the majority of uses).
+     Sections on a dark/navy background append `text-blue-bright` alongside
+     this class for correct contrast — see Hero, FiveWorlds, EventDetails,
+     Testimonials, Audience, FinalCTA. */
   .eyebrow {
-    @apply font-display text-xs font-bold uppercase tracking-[0.18em] text-orange;
+    @apply font-display text-xs font-bold uppercase tracking-[0.18em] text-blue;
   }
 
   .link-quiet {
-    @apply underline decoration-orange/40 decoration-2 underline-offset-4 transition-colors hover:decoration-orange;
+    @apply underline decoration-blue/40 decoration-2 underline-offset-4 transition-colors hover:decoration-blue;
   }
 
   /* Scroll-reveal — progressively enhanced by <Reveal /> */
@@ -124,7 +129,7 @@
     height: 44px;
     border-radius: 9999px;
     border: 2px solid rgba(255, 255, 255, 0.15);
-    border-top-color: #ff6d00;
+    border-top-color: #3e7bfa;
     animation: spin-slow 0.9s linear infinite;
   }
   @media (prefers-reduced-motion: reduce) {

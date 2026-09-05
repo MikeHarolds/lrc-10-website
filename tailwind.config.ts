@@ -2,9 +2,11 @@ import type { Config } from "tailwindcss";
 
 /**
  * Design tokens follow the ImpactField brand system (impactfield.com.ng,
- * Elementor global kit 8): ink #020D19, orange #FF6D00 accent, Inter/Onest,
- * pill buttons, 1300px container. The LRC conference palette (forest green +
- * gold) is retained only as a secondary accent.
+ * Elementor global kit 8): ink #020D19, Inter/Onest, pill buttons, 1300px
+ * container. The LRC 10.0 conference identity layered on top is a premium
+ * blue + white system inspired by a previous LRC edition's flyer artwork —
+ * see the `blue` scale below. ImpactField's own verified brand orange
+ * (`ifOrange`) is kept for exactly one use: the "ImpactField" wordmark itself.
  */
 const config: Config = {
   content: [
@@ -44,24 +46,29 @@ const config: Config = {
           soft: "#0A1826",
           line: "#1C2733",
         },
-        // ImpactField accent
-        orange: {
-          DEFAULT: "#FF6D00",
-          dark: "#E35F00",
-          soft: "#FFE8D6",
+        /**
+         * LRC 10.0 conference blue — extracted from a previous edition's flyer
+         * (deep navy → royal blue → bright cyan-blue gradient) and translated
+         * into a clean, modern system. Roles:
+         *   DEFAULT (primary) — buttons, links, accents on WHITE surfaces
+         *   dark              — hover/pressed state for primary-blue fills
+         *   bright            — accents/highlights/gradients on DARK (navy) surfaces
+         *   royal             — deep royal-blue foundation for "stronger colour"
+         *                       sections (Five Worlds)
+         *   light / soft      — subtle tint surfaces and hover backgrounds on white
+         */
+        blue: {
+          DEFAULT: "#1554F2",
+          dark: "#0E3FC4",
+          bright: "#3E7BFA",
+          royal: "#0B1D63",
+          light: "#EAF1FE",
+          soft: "#D6E4FB",
         },
-        // LRC conference accent — used sparingly (Five Worlds, small marks)
-        forest: {
-          DEFAULT: "#0C3B2E",
-          dark: "#082A20",
-          light: "#14543F",
-        },
-        gold: {
-          DEFAULT: "#C89B3C",
-          light: "#E5CB8B",
-          soft: "#F0E2C2",
-          dark: "#A67F28",
-        },
+        /** ImpactField's own verified brand accent — reserved for the literal
+         *  "ImpactField" wordmark (Logo.tsx, Preloader.tsx) only. Never used as
+         *  an LRC UI accent. */
+        ifOrange: "#FF6D00",
         // Neutral alt surface (was "cream")
         cream: {
           DEFAULT: "#F5F5F4",

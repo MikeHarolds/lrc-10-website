@@ -32,7 +32,7 @@ export default function ThemeSection() {
                     key={p}
                     className="flex items-center gap-3 text-sm font-semibold text-green"
                   >
-                    <span className="h-1.5 w-1.5 rounded-full bg-orange" aria-hidden="true" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-blue" aria-hidden="true" />
                     {p}
                   </li>
                 ))}
