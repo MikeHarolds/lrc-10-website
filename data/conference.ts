@@ -427,7 +427,7 @@ export const tickets = {
       ],
     },
     {
-      // name: "Gold",
+      name: "Gold",
       price: "Gold",
       priceNote: "See pricing on registration",
       featured: true,
@@ -444,7 +444,7 @@ export const tickets = {
       ],
     },
     {
-      // name: "Diamond",
+      name: "Diamond",
       price: "Diamond",
       priceNote: "See pricing on registration",
       featured: false,
