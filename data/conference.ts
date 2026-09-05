@@ -411,7 +411,7 @@ export const whyAttend = {
 export const tickets = {
   eyebrow: "Ticket Options",
   title: "Choose Your Experience",
-  // note: "Registration for the paid tier is not refundable, but it can be transferred to another person any time before the event.",
+   note: "",
   tiers: [
     {
       name: "Silver",
