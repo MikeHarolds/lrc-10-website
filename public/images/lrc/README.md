@@ -14,7 +14,7 @@ the exact layout box (no stock photos, no layout shift).
 | venue | `event/venue.jpg` | ✅ supplied |
 | program | `experience/program.jpg` | ✅ supplied |
 | finalCta | `legacy/final-cta.jpg` | ✅ supplied |
-| speaker portraits ×5 | `speakers/` | ⏳ awaiting confirmed line-up |
+| speaker portraits | `speakers/` | ✅ 3 confirmed (Solomon Chimaechi Okeke, Stephen Chima, Ngozi Aki) · ⏳ 2 TBA slots (Technology, Family) |
 | testimonial photos | `testimonials/` | ⏳ optional, awaiting real quotes |
 | partner logos ×6 | `partners/` | ⏳ awaiting confirmed partners |
 
@@ -46,10 +46,18 @@ job's trims in `scripts/process-images.mjs` if needed, run the script, then tune
 
 ## Speakers (`speakers.list`)
 
-- Folder `speakers/`, e.g. `speaker-01.jpg`. Ratio **3:4 portrait**, ~600×800,
-  head roughly centred, consistent crop across all speakers.
-- On each list item set `photo`, `placeholder: false`, `name` / `role` / `org`.
-  Optional `photoPosition` (e.g. `"50% 20%"`).
+- Folder `speakers/`. Confirmed: `solomon-chimaechi-okeke.jpg` (900×1125), `stephen-chima.jpg`
+  (900×1125), `ngozi-aki.jpg` (853×1280) — supplied headshots, downscaled/re-encoded via
+  `scripts/process-speaker-photos.mjs` (no crop; photographer's corner credit left intact).
+- Recommended for new speakers: portrait **3:4–4:5**, ~900px wide, head in the upper third,
+  consistent crop across speakers.
+- On each list item set `id`, `status: "confirmed"`, `name`, `photo`, and whatever of
+  `role` / `org` / `focus` / `bio` (array of paragraphs) / `expertise` / `achievements` /
+  `socialLinks` was actually supplied — omit fields you don't have, never invent them.
+  Optional `photoPosition` (e.g. `"50% 15%"`) if the face isn't in the upper-centre.
+  `SpeakerCard` + `SpeakerProfileModal` (in `components/`) render any speaker generically;
+  no component edits needed to add one. A `status: "tba"` entry (`{ id, status: "tba",
+  name: "Speaker TBA", focus? }`) renders the placeholder card and has no profile modal.
 
 ## Testimonials (`testimonials.list`)
 

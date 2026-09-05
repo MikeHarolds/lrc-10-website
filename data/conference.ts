@@ -194,10 +194,14 @@ export const fiveWorlds = {
 };
 
 /**
- * Speakers. The confirmed line-up is still to be supplied by the client
- * ("I will send the lineup of confirmed speakers").
- * Replace the placeholder entries below with real speakers — set `placeholder: false`
- * and add `photo`, `name`, `role`, `org`.
+ * Speakers. One object per speaker — the source of truth for both the
+ * speaker card and its profile modal (see SpeakerCard.tsx / SpeakerProfileModal.tsx).
+ *
+ * `status: "tba"` renders an elegant placeholder card with no profile modal.
+ * `status: "confirmed"` renders the real card and is clickable to open the
+ * full profile. To add a speaker, append an object here — no component changes
+ * needed. Only include information actually supplied for that speaker; leave
+ * a field out rather than inventing a value.
  */
 export const speakers = {
   eyebrow: "Meet the Voices",
@@ -205,27 +209,77 @@ export const speakers = {
   body: "We are bringing together voices with experience, insight and influence to challenge your thinking and equip you for the future.",
   note: "Other Extraordinary Speakers will be added to the Line-up Soon.",
   list: [
-    { placeholder: true, focus: "Leadership" },
-    { placeholder: true, focus: "Business" },
-    { placeholder: true, focus: "Faith" },
-    { placeholder: true, focus: "Technology" },
-    { placeholder: true, focus: "Family" },
+    {
+      id: "solomon-chimaechi-okeke",
+      status: "confirmed",
+      name: "Solomon Chimaechi Okeke",
+      role: "Co-Founder",
+      org: "ImpactField Global Youth Initiative",
+      focus: "Leadership",
+      photo: "/images/lrc/speakers/solomon-chimaechi-okeke.jpg",
+      photoPosition: "50% 15%",
+      bio: [
+        "Solomon Chimaechi Okeke is an inspirational figure with a clear focus on creating positive impact and empowering the youth. As the Co-founder of Impactfield Global Youth Initiative, he has been dedicated to supporting young people in Nigeria and beyond, providing them with valuable resources and opportunities since 2016.",
+        "In 2021, he took his passion for leadership development to the next level by establishing the Impactfield Leadership Institute. With its reach extending to seven countries, this institute aims to empower leaders and equip them with the necessary skills and knowledge for excellence. He's the host of the Exceptional Leaders Program (ELP) and the Christian Leaders Acceleration Program (CLAP).",
+        "Furthermore, Solomon Chimaechi Okeke co-hosts the Enugu Readers Summit, a literacy promotion event that has positively impacted the lives of over 50,000 people since its inception in 2016.",
+        "As a Leadership and Personal Development Trainer and Communication Coach, Solomon Okeke has honed his expertise in guiding individuals on their journey towards personal growth and leadership development. His efforts have been recognized through numerous awards and accolades, including being an award-winning author of eight books.",
+        "One of his notable initiatives is the annual Leadership Rebirth Conference, which has been taking place since 2017. This event is designed to nurture transformational leaders who possess essential qualities such as character, capacity, courage, competence, and virtue.",
+        "Through private coaching and mentoring sessions, he offers guidance and support to young people, helping them cultivate values, principles, and skills that contribute to successful and purposeful living. By encouraging them to discover their purpose and develop their potential, Solomon enables them to make the most of their God-given abilities.",
+        "Additionally, Solomon Okeke has sought continuous growth and learning opportunities by attending esteemed institutions like Daystar Leadership Academy, Destiny Leadership Academy, Dominion Leadership Institute, and the School of Purpose and Influence, New Zealand.",
+        "His dedication and impact on society were further recognized when he became a 2021 fellow of the Young Professional BootCamp, a notable platform for young professionals.",
+        "Through his various endeavors and commitments, Solomon Chimaechi Okeke exemplifies a strong commitment to making a positive difference in the lives of young people and empowering them to become exemplary leaders and citizens.",
+      ],
+    },
+    {
+      id: "stephen-chima",
+      status: "confirmed",
+      name: "Stephen Chima",
+      role: "Youth Minister & Social Impact Strategist",
+      org: "Speak Solution Hub",
+      focus: "Faith",
+      photo: "/images/lrc/speakers/stephen-chima.jpg",
+      photoPosition: "50% 15%",
+      bio: [
+        "Stephen Chima is a youth minister, social impact strategist, and emerging legal professional committed to youth development and transformational leadership in Africa.",
+        "A graduate of Law from the University of Nigeria, Nsukka, he blends legal training with grassroots advocacy, pastoral ministry, and strategic communication.",
+        "He is the visionary founder of Speak Solution Hub, a platform advancing youth mentorship and policy dialogue among young Africans.",
+        "A published author and conference speaker, Stephen has experience across education, media, and brand strategy. He has engaged diverse audiences on leadership and social change, and is a Fellow of the United Nations Academic Impact and Future Africa Project.",
+      ],
+    },
+    {
+      id: "ngozi-aki",
+      status: "confirmed",
+      name: "Ngozi Aki",
+      role: "Marketing and Sales Executive",
+      focus: "Business",
+      photo: "/images/lrc/speakers/ngozi-aki.jpg",
+      photoPosition: "55% 15%",
+    },
+    { id: "speaker-tba-1", status: "tba", name: "Speaker TBA", focus: "Technology" },
+    { id: "speaker-tba-2", status: "tba", name: "Speaker TBA", focus: "Family" },
   ] as Speaker[],
 };
 
 export type Speaker = {
-  placeholder?: boolean;
-  name?: string;
+  id: string;
+  status: "confirmed" | "tba";
+  name: string;
   role?: string;
   org?: string;
   focus?: string;
   /**
-   * Portrait 3:4 (e.g. 600×800), head roughly centred, consistent framing
+   * Portrait 3:4–4:5, head roughly in the upper third, consistent framing
    * across speakers. Drop files in public/images/lrc/speakers/ and set the path.
    */
   photo?: string;
-  /** object-position override if the subject is not centred (e.g. "50% 25%"). */
+  /** object-position override if the subject is not centred (e.g. "50% 15%"). */
   photoPosition?: string;
+  /** Biography as supplied, one paragraph per array entry. Omit if not supplied. */
+  bio?: string[];
+  /** Only populate from explicit structured lists in the source — never inferred. */
+  expertise?: string[];
+  achievements?: string[];
+  socialLinks?: { linkedin?: string; twitter?: string; website?: string };
 };
 
 export const audience = {

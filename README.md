@@ -38,7 +38,7 @@ All copy, links, dates, speakers, tickets, FAQs, stats and image URLs are in a s
 
 | Item | Location in `data/conference.ts` | Notes |
 |---|---|---|
-| Speakers | `speakers.list` | Currently 5 "To Be Announced" cards. Add `name`, `role`, `org`, `photo`, set `placeholder: false`. |
+| Speakers | `speakers.list` | 3 confirmed (Solomon Chimaechi Okeke, Stephen Chima, Ngozi Aki) + 2 "To Be Announced" (Technology, Family). To add one: append `{ id, status: "confirmed", name, role?, org?, focus?, photo?, bio? }` — the card and profile modal pick it up automatically, no component changes needed. See "Speaker profiles" below. |
 | Testimonials | `testimonials.list` | Placeholder quotes. Replace `quote` / `name` / `role`, set `placeholder: false`; optional square `photo`. |
 | Partner logos | `partners.logos` | Set `{ name, src }` on a slot — `src` under `/images/lrc/partners/`. Empty slots show a neutral tile. |
 | Ticket pricing | `tickets.tiers` | Silver is free (confirmed). Gold/Diamond prices live on the events platform — shown as "See pricing on registration". |
@@ -56,6 +56,22 @@ holds the exact layout box (no stock photos, no layout shift). Drop files into
 guidance) in [`public/images/lrc/README.md`](public/images/lrc/README.md). All images are
 local; there are no remote image hosts.
 
+### Speaker profiles
+
+Each entry in `speakers.list` (`data/conference.ts`) is one self-contained object —
+`SpeakerCard` and `SpeakerProfileModal` render generically from it, so adding, editing
+or removing a speaker never touches component code.
+
+- **`status: "confirmed"`** — photo + name + role/org, clickable, opens `SpeakerProfileModal`
+  (bio paragraphs, and — only if actually supplied — `expertise`, `achievements`,
+  `socialLinks`). Fields left unsupplied are simply omitted from the modal.
+- **`status: "tba"`** — `{ id, status: "tba", name: "Speaker TBA", focus? }` renders the
+  existing "To Be Announced" placeholder card; it is not clickable and never opens an
+  empty modal.
+
+To add a speaker: append an object to `speakers.list` and drop their photo in
+`public/images/lrc/speakers/` (see that folder's README for sizing). Nothing else changes.
+
 ## Structure
 
 ```
@@ -66,9 +82,9 @@ app/
   robots.ts, sitemap.ts
 components/
   Header, Hero, Countdown, AboutConference, ThemeSection, CultureReasons,
-  FiveWorlds, EventDetails, Speakers, Audience, Experience, Program, WhyAttend,
-  Tickets, Testimonials, ImpactStats, FAQ, Partners, Legacy, FinalCTA, Footer,
-  Preloader, Logo, AnniversarySeal
+  FiveWorlds, EventDetails, Speakers, SpeakerCard, SpeakerProfileModal, Audience,
+  Experience, Program, WhyAttend, Tickets, Testimonials, ImpactStats, FAQ, Partners,
+  Legacy, FinalCTA, Footer, Preloader, Logo, AnniversarySeal
   ui/                   CTAButton, SectionHeading, SectionImage, Reveal
 data/conference.ts      single source of truth (content + imageAssets)
 lib/icons.tsx           icon registry
