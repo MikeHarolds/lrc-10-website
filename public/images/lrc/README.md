@@ -14,7 +14,7 @@ the exact layout box (no stock photos, no layout shift).
 | venue | `event/venue.jpg` | ✅ supplied |
 | program | `experience/program.jpg` | ✅ supplied |
 | finalCta | `legacy/final-cta.jpg` | ✅ supplied |
-| speaker portraits | `speakers/` | ✅ 3 confirmed (Solomon Chimaechi Okeke, Stephen Chima, Ngozi Aki) · ⏳ 2 TBA slots (Technology, Family) |
+| speaker portraits | `speakers/` | ✅ 6 confirmed (Solomon Chimaechi Okeke, Stephen Chima, Ngozi Aki, Dr. Sam Iheanacho, Donatus Prince, Dr. Gozie C. Udemezue) |
 | testimonial photos | `testimonials/` | ⏳ optional, awaiting real quotes |
 | partner logos ×6 | `partners/` | ⏳ awaiting confirmed partners |
 
@@ -46,9 +46,10 @@ job's trims in `scripts/process-images.mjs` if needed, run the script, then tune
 
 ## Speakers (`speakers.list`)
 
-- Folder `speakers/`. Confirmed: `solomon-chimaechi-okeke.jpg` (900×1125), `stephen-chima.jpg`
-  (900×1125), `ngozi-aki.jpg` (853×1280) — supplied headshots, downscaled/re-encoded via
-  `scripts/process-speaker-photos.mjs` (no crop; photographer's corner credit left intact).
+- Folder `speakers/`. Confirmed: `solomon-chimaechi-okeke.jpg`, `stephen-chima.jpg`,
+  `ngozi-aki.jpg`, `sam-iheanacho.jpg`, `donatus-prince.jpg`, `gozie-udemezue.jpg` — supplied
+  headshots, downscaled/re-encoded via `scripts/process-speaker-photos.mjs` (no crop;
+  photographer's corner credit left intact where present).
 - Recommended for new speakers: portrait **3:4–4:5**, ~900px wide, head in the upper third,
   consistent crop across speakers.
 - On each list item set `id`, `status: "confirmed"`, `name`, `photo`, and whatever of
@@ -57,7 +58,9 @@ job's trims in `scripts/process-images.mjs` if needed, run the script, then tune
   Optional `photoPosition` (e.g. `"50% 15%"`) if the face isn't in the upper-centre.
   `SpeakerCard` + `SpeakerProfileModal` (in `components/`) render any speaker generically;
   no component edits needed to add one. A `status: "tba"` entry (`{ id, status: "tba",
-  name: "Speaker TBA", focus? }`) renders the placeholder card and has no profile modal.
+  name: "Speaker TBA", focus? }`) renders the placeholder card and has no profile modal —
+  none are currently in the list since all five "worlds" now have a confirmed speaker;
+  add one back any time a category needs a placeholder again.
 
 ## Testimonials (`testimonials.list`)
 

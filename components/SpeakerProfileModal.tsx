@@ -80,7 +80,11 @@ export default function SpeakerProfileModal({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const firstName = speaker.name.split(" ")[0];
+  // Drop a leading honorific (Dr., Prof., Mr., Mrs., Ms., Rev., Engr., Barr., Pst.)
+  // so "About {firstName}" reads correctly for any speaker, titled or not.
+  const firstName = speaker.name
+    .replace(/^(dr|prof|mr|mrs|ms|miss|rev|engr|barr|pst|chief)\.?\s+/i, "")
+    .split(" ")[0];
   const hasBio = speaker.bio && speaker.bio.length > 0;
   const hasExpertise = speaker.expertise && speaker.expertise.length > 0;
   const hasAchievements = speaker.achievements && speaker.achievements.length > 0;
