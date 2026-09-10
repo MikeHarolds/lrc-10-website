@@ -14,7 +14,7 @@ the exact layout box (no stock photos, no layout shift).
 | venue | `event/venue.jpg` | ✅ supplied |
 | program | `experience/program.jpg` | ✅ supplied |
 | finalCta | `legacy/final-cta.jpg` | ✅ supplied |
-| speaker portraits | `speakers/` | ✅ 6 confirmed (Solomon Chimaechi Okeke, Stephen Chima, Ngozi Aki, Dr. Sam Iheanacho, Donatus Prince, Dr. Gozie C. Udemezue) |
+| speaker portraits | `speakers/` | ✅ 9 confirmed (Solomon Chimaechi Okeke, Stephen Chima, Ngozi Aki, Dr. Sam Iheanacho, Donatus Prince, Dr. Gozie C. Udemezue, Gideon Igwe, Chiedozie Okeke DSMLD, Larry Oguego) |
 | testimonial photos | `testimonials/` | ⏳ optional, awaiting real quotes |
 | partner logos ×6 | `partners/` | ⏳ awaiting confirmed partners |
 
@@ -47,9 +47,12 @@ job's trims in `scripts/process-images.mjs` if needed, run the script, then tune
 ## Speakers (`speakers.list`)
 
 - Folder `speakers/`. Confirmed: `solomon-chimaechi-okeke.jpg`, `stephen-chima.jpg`,
-  `ngozi-aki.jpg`, `sam-iheanacho.jpg`, `donatus-prince.jpg`, `gozie-udemezue.jpg` — supplied
-  headshots, downscaled/re-encoded via `scripts/process-speaker-photos.mjs` (no crop;
-  photographer's corner credit left intact where present).
+  `ngozi-aki.jpg`, `sam-iheanacho.jpg`, `donatus-prince.jpg`, `gozie-udemezue.jpg`,
+  `gideon-igwe.jpg`, `chiedozie-okeke.jpg`, `larry-oguego.jpg` — supplied headshots,
+  downscaled/re-encoded via `scripts/process-speaker-photos.mjs` (no crop; photographer's
+  corner credit left intact where present). Gideon Igwe, Chiedozie Okeke and Larry Oguego
+  were only supplied a name + role — no `bio`; the modal omits the "About" section when
+  `bio` isn't set.
 - Recommended for new speakers: portrait **3:4–4:5**, ~900px wide, head in the upper third,
   consistent crop across speakers.
 - On each list item set `id`, `status: "confirmed"`, `name`, `photo`, and whatever of

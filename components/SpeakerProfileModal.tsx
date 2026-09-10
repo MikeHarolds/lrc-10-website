@@ -118,7 +118,7 @@ export default function SpeakerProfileModal({
           <X className="h-5 w-5" />
         </button>
 
-        <div className="relative h-56 w-full shrink-0 sm:h-auto sm:w-[38%]">
+        <div className="relative h-56 w-full shrink-0 sm:h-auto sm:min-h-[420px] sm:w-[38%]">
           {speaker.photo ? (
             <Image
               src={speaker.photo}

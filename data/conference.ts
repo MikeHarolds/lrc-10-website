@@ -314,6 +314,33 @@ export const speakers = {
         "Dr. Udemezue continues to use law, faith, and leadership to empower women, support widows, and promote justice and healing in communities across Nigeria and beyond.",
       ],
     },
+    {
+      id: "gideon-igwe",
+      status: "confirmed",
+      name: "Gideon Igwe (YoungMoney)",
+      role: "CEO: DEGXIFI LTD",
+      focus: "Business",
+      photo: "/images/lrc/speakers/gideon-igwe.jpg",
+      photoPosition: "50% 18%",
+    },
+    {
+      id: "chiedozie-okeke",
+      status: "confirmed",
+      name: "Chiedozie Okeke DSMLD",
+      role: "Chief Strategy Officer: Justprints Ltd.",
+      focus: "Leadership",
+      photo: "/images/lrc/speakers/chiedozie-okeke.jpg",
+      photoPosition: "50% 16%",
+    },
+    {
+      id: "larry-oguego",
+      status: "confirmed",
+      name: "Larry Oguego",
+      role: "Founder: Human Rights Volunteer Corps",
+      focus: "Family",
+      photo: "/images/lrc/speakers/larry-oguego.jpg",
+      photoPosition: "50% 22%",
+    },
   ] as Speaker[],
 };
 
