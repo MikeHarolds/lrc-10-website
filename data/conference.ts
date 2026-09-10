@@ -208,6 +208,11 @@ export const speakers = {
   title: "Leaders. Thinkers. Builders. Innovators. Change-makers.",
   body: "We are bringing together voices with experience, insight and influence to challenge your thinking and equip you for the future.",
   note: "Other Extraordinary Speakers will be added to the Line-up Soon.",
+  /**
+   * Editorial order — manually curated, NOT auto-sorted. When adding a future
+   * speaker, insert their object at the intended position; do not resort this
+   * array (e.g. alphabetically) by any property.
+   */
   list: [
     {
       id: "solomon-chimaechi-okeke",
@@ -231,37 +236,6 @@ export const speakers = {
       ],
     },
     {
-      id: "stephen-chima",
-      status: "confirmed",
-      name: "Stephen Chima",
-      role: "Founder: Speak Solution Hub",
-      org: "Speak Solution Hub",
-      focus: "Faith",
-      photo: "/images/lrc/speakers/stephen-chima.jpg",
-      photoPosition: "50% 15%",
-      bio: [
-        "Stephen Chima is a youth minister, social impact strategist, and emerging legal professional committed to youth development and transformational leadership in Africa.",
-        "A graduate of Law from the University of Nigeria, Nsukka, he blends legal training with grassroots advocacy, pastoral ministry, and strategic communication.",
-        "He is the visionary founder of Speak Solution Hub, a platform advancing youth mentorship and policy dialogue among young Africans.",
-        "A published author and conference speaker, Stephen has experience across education, media, and brand strategy. He has engaged diverse audiences on leadership and social change, and is a Fellow of the United Nations Academic Impact and Future Africa Project.",
-      ],
-    },
-    {
-      id: "ngozi-aki",
-      status: "confirmed",
-      name: "Ngozi Aki",
-      role: "Marketing and Sales Executive",
-      focus: "Business",
-      photo: "/images/lrc/speakers/ngozi-aki.jpg",
-      photoPosition: "55% 15%",
-        bio: [
-        "Ngozi Aki is a dynamic finance and business professional and Deputy Manager in a reputable financial institution, with professional expertise spanning Finance, Business Development, and Customer Experience Management. She brings a strong combination of financial knowledge, business acumen, strategic thinking, and a commitment to service excellence.",
-        "Beyond her corporate career, Ngozi is deeply passionate about mentoring and empowering young adults. She is committed to helping young people discover their purpose, identify their strengths, make informed career choices, and develop the skills, confidence, and mindset required to thrive personally and professionally.",
-        "Through mentorship and career development conversations, she equips young adults with practical insights to navigate career decisions, become employable, build meaningful professional lives, and remain relevant in an ever-changing world.",
-        "Ngozi holds a B.Sc. in Accountancy and an MBA in Marketing, giving her a unique blend of expertise in finance, management, marketing, and business development. Her passion for people development reflects her belief that when young adults gain clarity about who they are and where they are going, they are better positioned to create meaningful impact in their careers, communities, and society.",
-      ],
-    },
-    {
       id: "sam-iheanacho",
       status: "confirmed",
       name: "Dr. Sam Iheanacho",
@@ -275,23 +249,6 @@ export const speakers = {
         "Dr. Iheanacho serves as a Director at Ifysam Properties, consults on leadership and organisational culture, and is a member of United Nations–POLAC as a Justice of Peace.",
         "He is the President of Destiny Life Leadership Academy and host of the annual Leadership and Church Growth Conference. He has authored five books, including Don't Die Yet, Scaling New Heights, Wisdom and Leadership Quotes, The New You, and Take The Lead.",
         "He is married to Mrs. Ifeyinwa Iheanacho, and they are blessed with four children.",
-      ],
-    },
-    {
-      id: "donatus-prince",
-      status: "confirmed",
-      name: "Donatus Prince",
-      role: "Founder: Verxio",
-      focus: "Technology",
-      photo: "/images/lrc/speakers/donatus-prince.jpg",
-      photoPosition: "55% 20%",
-      bio: [
-        "Donatus Prince is an AI entrepreneur, software engineer, business educator, and speaker passionate about helping people and businesses reach their fullest potential.",
-        "He is the founder of Verxio, an AI operating system designed to help businesses connect their tools, automate operational work, and use AI to get real work done.",
-        "With a background spanning software engineering, artificial intelligence, entrepreneurship, and business growth, Donatus is focused on making technology practical and accessible, particularly for entrepreneurs and businesses across Africa.",
-        "Beyond technology, his bigger mission is human potential. He believes that many people are capable of far more than their current circumstances suggest, and his goal is to help individuals discover what they are capable of, develop the right mindset and skills, and become the fullest version of themselves.",
-        "Through his speaking, workshops, and educational content, Donatus challenges people to pursue excellence, embrace continuous learning, leverage technology, and intentionally build better businesses and better lives.",
-        "His philosophy is simple: technology is a tool. The ultimate goal is to help people become more, do more, and create more with the potential they already have.",
       ],
     },
     {
@@ -315,6 +272,30 @@ export const speakers = {
       ],
     },
     {
+      id: "larry-oguego",
+      status: "confirmed",
+      name: "Larry Oguego",
+      role: "Founder: Human Rights Volunteer Corps",
+      focus: "Family",
+      photo: "/images/lrc/speakers/larry-oguego.jpg",
+      photoPosition: "50% 22%",
+    },
+    {
+      id: "ngozi-aki",
+      status: "confirmed",
+      name: "Ngozi Aki",
+      role: "Marketing and Sales Executive",
+      focus: "Business",
+      photo: "/images/lrc/speakers/ngozi-aki.jpg",
+      photoPosition: "55% 15%",
+      bio: [
+        "Ngozi Aki is a dynamic finance and business professional and Deputy Manager in a reputable financial institution, with professional expertise spanning Finance, Business Development, and Customer Experience Management. She brings a strong combination of financial knowledge, business acumen, strategic thinking, and a commitment to service excellence.",
+        "Beyond her corporate career, Ngozi is deeply passionate about mentoring and empowering young adults. She is committed to helping young people discover their purpose, identify their strengths, make informed career choices, and develop the skills, confidence, and mindset required to thrive personally and professionally.",
+        "Through mentorship and career development conversations, she equips young adults with practical insights to navigate career decisions, become employable, build meaningful professional lives, and remain relevant in an ever-changing world.",
+        "Ngozi holds a B.Sc. in Accountancy and an MBA in Marketing, giving her a unique blend of expertise in finance, management, marketing, and business development. Her passion for people development reflects her belief that when young adults gain clarity about who they are and where they are going, they are better positioned to create meaningful impact in their careers, communities, and society.",
+      ],
+    },
+    {
       id: "gideon-igwe",
       status: "confirmed",
       name: "Gideon Igwe (YoungMoney)",
@@ -324,6 +305,39 @@ export const speakers = {
       photoPosition: "50% 18%",
     },
     {
+      id: "stephen-chima",
+      status: "confirmed",
+      name: "Stephen Chima",
+      role: "Founder: Speak Solution Hub",
+      org: "Speak Solution Hub",
+      focus: "Faith",
+      photo: "/images/lrc/speakers/stephen-chima.jpg",
+      photoPosition: "50% 15%",
+      bio: [
+        "Stephen Chima is a youth minister, social impact strategist, and emerging legal professional committed to youth development and transformational leadership in Africa.",
+        "A graduate of Law from the University of Nigeria, Nsukka, he blends legal training with grassroots advocacy, pastoral ministry, and strategic communication.",
+        "He is the visionary founder of Speak Solution Hub, a platform advancing youth mentorship and policy dialogue among young Africans.",
+        "A published author and conference speaker, Stephen has experience across education, media, and brand strategy. He has engaged diverse audiences on leadership and social change, and is a Fellow of the United Nations Academic Impact and Future Africa Project.",
+      ],
+    },
+    {
+      id: "donatus-prince",
+      status: "confirmed",
+      name: "Donatus Prince",
+      role: "Founder: Verxio",
+      focus: "Technology",
+      photo: "/images/lrc/speakers/donatus-prince.jpg",
+      photoPosition: "55% 20%",
+      bio: [
+        "Donatus Prince is an AI entrepreneur, software engineer, business educator, and speaker passionate about helping people and businesses reach their fullest potential.",
+        "He is the founder of Verxio, an AI operating system designed to help businesses connect their tools, automate operational work, and use AI to get real work done.",
+        "With a background spanning software engineering, artificial intelligence, entrepreneurship, and business growth, Donatus is focused on making technology practical and accessible, particularly for entrepreneurs and businesses across Africa.",
+        "Beyond technology, his bigger mission is human potential. He believes that many people are capable of far more than their current circumstances suggest, and his goal is to help individuals discover what they are capable of, develop the right mindset and skills, and become the fullest version of themselves.",
+        "Through his speaking, workshops, and educational content, Donatus challenges people to pursue excellence, embrace continuous learning, leverage technology, and intentionally build better businesses and better lives.",
+        "His philosophy is simple: technology is a tool. The ultimate goal is to help people become more, do more, and create more with the potential they already have.",
+      ],
+    },
+    {
       id: "chiedozie-okeke",
       status: "confirmed",
       name: "Chiedozie Okeke DSMLD",
@@ -331,15 +345,6 @@ export const speakers = {
       focus: "Leadership",
       photo: "/images/lrc/speakers/chiedozie-okeke.jpg",
       photoPosition: "50% 16%",
-    },
-    {
-      id: "larry-oguego",
-      status: "confirmed",
-      name: "Larry Oguego",
-      role: "Founder: Human Rights Volunteer Corps",
-      focus: "Family",
-      photo: "/images/lrc/speakers/larry-oguego.jpg",
-      photoPosition: "50% 22%",
     },
   ] as Speaker[],
 };
