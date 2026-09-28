@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Onest } from "next/font/google";
 import { site } from "@/data/conference";
 import Preloader from "@/components/Preloader";
+import MetaPixel from "@/components/MetaPixel";
 import "./globals.css";
 
 const inter = Inter({
@@ -71,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${onest.variable}`}>
       <body>
+        <MetaPixel />
         <Preloader />
         <a
           href="#main"
